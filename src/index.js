@@ -7,5 +7,5 @@ import './../node_modules/bootstrap/dist/css/bootstrap-theme.css';
 
 ReactDOM.render(
     <App />,
-    document.getElementById("container")
+    document.getElementById("root")
 );
