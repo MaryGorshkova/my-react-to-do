@@ -1,15 +1,16 @@
 import React from "react";
 import Subtask from "./Subtask.js";
-import {Button, ControlLabel,
+import {SubTaskListData} from "./../data/subtasks.js";
+import {Button,
     Form, FormControl, FormGroup,
-    ListGroup, ListGroupItem} from 'react-bootstrap';
+    ListGroup} from 'react-bootstrap';
 
 class SubtaskList extends React.Component {
 
     constructor(props){
         super(props);
         this.state = {
-            subtasks: list
+            subtasks: SubTaskListData
         };
     }
 
@@ -32,13 +33,6 @@ class SubtaskList extends React.Component {
         )
     }
 }
-
-const list = [
-    {Key: "0", Name:"Task 0"},
-    {Key: "1", Name:"Task 1"},
-    {Key: "2", Name:"Task 2"},
-    {Key: "3", Name:"Task 3"}
-];
 
 
 export default SubtaskList;

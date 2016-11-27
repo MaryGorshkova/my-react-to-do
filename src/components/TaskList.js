@@ -1,15 +1,16 @@
 import React from 'react';
 import Task from "./Task.js";
-import {Button, ControlLabel,
+import {TaskListData} from "./../data/subtasks.js";
+import {Button,
     Form, FormControl, FormGroup,
-    ListGroup, ListGroupItem} from 'react-bootstrap';
+    ListGroup} from 'react-bootstrap';
 
 class TaskList extends React.Component {
 
     constructor(props){
         super(props);
         this.state = {
-            tasks: tree
+            tasks: TaskListData
         };
     }
 
@@ -34,9 +35,3 @@ class TaskList extends React.Component {
 }
 
 export default TaskList;
-
-const tree = [
-    {Key: "00", Name: "00"},
-    {Key: "01", Name: "01", Childs: [{Key: "10", Name: "10"}, {Key: "11", Name: "11", Childs: [ {Key: "20", Name: "21"} ]}]},
-    {Key: "02", Name: "02"}
-];
