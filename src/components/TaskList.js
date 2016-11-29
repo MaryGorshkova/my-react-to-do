@@ -1,6 +1,6 @@
 import React from 'react';
 import Task from "./Task.js";
-import {TaskListData} from "./../data/subtasks.js";
+import {TaskListData} from "./../data/tasks.js";
 import {Button,
     Form, FormControl, FormGroup,
     ListGroup} from 'react-bootstrap';
@@ -26,7 +26,9 @@ class TaskList extends React.Component {
                 </Form>
 
                 <ListGroup>
-                    {this.state.tasks.map((elem, index) => <Task key={elem.Key} item={elem}/>)}
+                    {this.state.tasks.map((elem, index) =>
+                        <Task key={elem.Key} item={elem} onClick={this.props.selectTask.bind(null, elem)}/>
+                    )}
                 </ListGroup>
 
             </div>
